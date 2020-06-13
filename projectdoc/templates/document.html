@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
-<form method="post">
-<div id="DivActiveUsers">
-    Users viewing: {%for i in log%}
-    <strong>{{i}}</strong>
-    {%endfor%}
-    <br>
-    <br>
-    <a href="/" > Refresh</a> to update viewers.
-</div>
-    <div style="height: 10px;width: 900px;"></div>
-    <div><h3>Text Editor</h3></div>
-<textarea id="txt_content" placeholder="Type your document contents here.." rows="100" cols="100"
-spellcheck="true" style="height: 300px;width: 900px;background-color:white;"></textarea>
-<center><button class="btn btn-dark" type="submit" id="btnSave">Save</button></center>
+<center>
+<div><h5>Start a new document</h5></div>
 
+<form method ="POST">
+
+    {%csrf_token %}
+    {{ form }}
+    <br>
+    <button  class="btn btn-dark" type="submit">Save Document</button>
+    <br>
 </form>
+</center>
+<br>
+<br>
+<br>
 {% else %}
-Login to create a document.
+<center><h5>Login to create a document.</h5></center>
+
 {% endif %}
 
 {% endblock %}

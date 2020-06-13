@@ -1,4 +1,3 @@
-
 from django.contrib import admin
 from django.contrib.auth import login
 from django.urls import path
@@ -13,4 +12,5 @@ urlpatterns = [
     path("login/home/",views.home,name='homelog'),
     path("logout/", views.logout_request, name="logout"),
     path("login/",views.login_request,name='login'),
+    path("document/",views.docform,name='document'),
     ]

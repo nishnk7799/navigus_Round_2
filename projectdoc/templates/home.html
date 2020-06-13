@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
-<center><h3> Welcome {{user.username}}<h3></center>
+<center><h3> Welcome, {{user.username}} !<h3></center>
+
+<br>
+<center>
+    <a class="waves-effect waves-dark btn-large" href="document">New Document +</a>
+    <a class="waves-effect waves-dark btn-large" href="/">View Document</a>
+</center>
+<center><img src="/static/image/1.png" alt="Document Image" width="1000" height="400"></center>
 {% else %}
 <center><h3> Welcome<h3></center>
+<center><h4>Sign in to create a new document.</h4></center>
+<center><img src="/static/image/1.png" alt="Document Image" width="1000" height="400"></center>
+
 {% endif %}
 
 
