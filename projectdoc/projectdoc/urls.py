@@ -13,4 +13,5 @@ urlpatterns = [
     path("logout/", views.logout_request, name="logout"),
     path("login/",views.login_request,name='login'),
     path("document/",views.docform,name='document'),
+    path("viewdoc/",views.viewdoc,name="viewdoc"),
     ]

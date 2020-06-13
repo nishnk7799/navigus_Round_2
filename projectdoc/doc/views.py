@@ -12,7 +12,7 @@ from django.contrib.sessions.models import Session
 from django.utils import timezone
 
 from doc.models import LoggedUser
-
+from .models import Post
 from .forms import HomeForm
 
 
@@ -85,8 +85,10 @@ def docform(request):
         text=""
         if form.is_valid():
             Document=form.save(commit=False)
+            Title = form.save(commit=False)
             Document.user=request.user
             Document.save()
+            Title.save()
             text=form.cleaned_data['Document']
             form=HomeForm
             messages.info(request, "Document Saved !")
@@ -97,4 +99,10 @@ def docform(request):
     if request.method=="GET":
         form = HomeForm()
         return render(request, 'document.html', {"form": form})
+
+def viewdoc(request):
+    logged_users = [user.user for user in LoggedUser.objects.all()]
+    if request.method == "GET":
+        posts=Post.objects.all()
+    return render(request, 'viewdoc.html', {"log": logged_users,"posts":posts},)
 

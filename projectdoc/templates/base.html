@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HomePage</title>
+    <title>Document Presenter</title>
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -21,7 +21,7 @@
 </style>
     {% load static %}
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #101357">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/">
       <img src="https://img.icons8.com/cotton/2x/file.png" width="40" height="40" alt="">
       Document Presenter</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,6 @@
 </nav>
    </head>
 <body>
-<br>
 {% if messages %}
     {%for message in messages%}
         <script>

@@ -24,4 +24,5 @@ class LoggedUser(models.Model):
 
 class Post(models.Model):
     Document = models.TextField(max_length=8000)
+    Title = models.CharField(max_length=100)
     user = models.ForeignKey(User,on_delete=models.CASCADE,)
