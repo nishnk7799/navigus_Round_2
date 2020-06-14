@@ -10,8 +10,8 @@ Materialize 1.0
 
 ## Installation Steps
 
-1. Install python 3.6 if not done already 
-2. Download and extract application tar ball
+1. Install python 3.8 and django 3 if not done already.
+2. Download and extract application
 3. Import the project to an IDE of your choice (I use PyCharm)
 4. Setup project interpreter (setup python venv) and project structure.
 5. Configure your database details in settings.py file.
